@@ -1,11 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import '@fontsource/courgette'
+import '@fontsource/oswald'
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `black`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -16,7 +18,8 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <img src="https://img.icons8.com/cotton/64/000000/cat-footprint--v1.png" style={{float:"left", marginBotton: '100px',paddingRight:'20px'}}/>
+      <h1 style={{fontFamily: 'courgette', margin: 0, paddingTop:'20px' }}>
         <Link
           to="/"
           style={{
@@ -27,6 +30,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <span style={{color:'white', fontFamily: 'oswald'}}>
+        <Link to="/">Home</Link> {' '}
+        <Link to="/projects/">Projects</Link> 
+      </span>
     </div>
   </header>
 )
